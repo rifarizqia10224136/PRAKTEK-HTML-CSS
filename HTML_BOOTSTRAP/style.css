@@ -1,0 +1,252 @@
+:root {
+    --primary-bg: #fff7e6;         
+    --card-bg: #f7c8d3;            
+    --text-main: #1e293b;          
+    --text-muted: #64748b;         
+    --accent-blue: #507296;        
+    --accent-pink-grad: linear-gradient(135deg, #fbcfe8 0%, #a8b58a 100%); 
+    --code-bg: #507296;            
+    --code-text: #e2e8f0;          
+    --border-color: #e2e8f0;       
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.15); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Libre Caslon Condensed', serif;
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.main-header, 
+.card {
+    background-color: var(--card-bg);
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md); 
+}
+
+.main-header {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+}
+
+.header-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.section-text {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.subsection-title {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin: 15px 0 8px 0;
+}
+
+.sub-subsection-title {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin: 12px 0 6px 0;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.card-header:first-of-type {
+    margin-top: 0;
+}
+
+.card-header-icon {
+    font-size: 1.4rem;
+    margin-right: 12px;
+}
+
+.card-header-text h2 {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    margin: 0;
+}
+
+.custom-list, 
+.custom-list-ordered {
+    background: var(--accent-pink-grad);
+    padding: 15px 15px 15px 35px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.custom-list li, 
+.custom-list-ordered li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.code-snippet {
+    background-color: #f1f5f9;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.code-block {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.styled-table th {
+    background-color: var(--accent-blue);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.styled-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+.styled-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.contact-form {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px dashed var(--accent-blue);
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.submit-btn {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #0369a1;
+}
+
+.live-examples {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f8fafc;
+}
+
+.congrats-box {
+    background: linear-gradient(135deg, #a8b58a 0%, #a8b58a 100%);
+    color: white;
+}
+
+.congrats-box .card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.congrats-box .card-header-text h2 {
+    color: white;
+}
+
+.congrats-box .section-text {
+    color: #f1f5f9;
+}
